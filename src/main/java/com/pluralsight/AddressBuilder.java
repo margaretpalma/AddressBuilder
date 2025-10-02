@@ -23,6 +23,7 @@ public class AddressBuilder {
         System.out.print("Billing Zipcode: ");
         String billingZipcode = scanner.nextLine();
 
+        System.out.print("---------------------------\n");
         System.out.print("Shipping street: ");
         String shippingStreet = scanner.nextLine();
         System.out.print("Shipping City: ");
@@ -35,8 +36,28 @@ public class AddressBuilder {
        addressInfo.append(fullName).append("\n")
                .append("Billing Address:\n")
                .append(billingStreet).append("\n")
-               .append(billingCity).append(",").append(billingState)
-               .append(billingStreet).append("\n")
+               .append(billingCity)
+               .append(",")
+               .append(billingState)
+               .append(" ")
+               .append(billingZipcode)
+               .append("\n")
+               .append("-----------------------\n")
+               .append("Shipping Address: \n")
+               .append(shippingStreet).append("\n")
+               .append(shippingCity)
+               .append(", ")
+               .append(shippingState)
+               .append(" ")
+               .append(shippingZipcode);
+
+        System.out.println("\nAddress Info: ");
+        System.out.println(addressInfo.toString());
+
+        scanner.close();
+
+
+
 
     }
 }
